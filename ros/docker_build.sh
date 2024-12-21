@@ -1,0 +1,1 @@
+podman build -t rosbagconverter:latest -f ./Dockerfile

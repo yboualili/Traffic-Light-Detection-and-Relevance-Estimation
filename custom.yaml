@@ -1,0 +1,14 @@
+train: dtld_normal/train/images
+val: dtld_normal/test/images
+
+#Classes
+nc: 20
+
+#classes names
+#replace all class names list with your classes names
+names: ['circle_green', 'circle_red', 'off', 'circle_red_yellow', 'arrow_left_green', 'circle_yellow', 'arrow_right_red', 'arrow_left_red', 'arrow_straight_red', 'arrow_left_red_yellow', 'arrow_left_yellow', 'arrow_straight_yellow', 'arrow_right_red_yellow', 'arrow_right_green', 'arrow_right_yellow', 'arrow_straight_green', 'arrow_straight_left_green', 'arrow_straight_red_yellow', 'arrow_straight_left_red', 'arrow_straight_left_yellow']
+#names: ["ampel"]
+#yolo task=detect mode=train model=yolov8m.pt data=custom.yaml epochs=300 imgsz=640 device=0 degrees=180 shear=25 flipud=0.5 copy_paste=0.2 cos_lr=True optimizer=Adam
+#yolo task=detect mode=train model=yolov8m.pt data=custom.yaml epochs=300 imgsz=1024 device=0 workers=4 pretrained=True batch=-1
+
+#python train.py --data data/custom.yaml --img 640 --epochs 150 --hyp data/hyps/hyp.scratch-high.yaml --device 0 --image-weights --patience 50
